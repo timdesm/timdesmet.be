@@ -52,9 +52,10 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 timdesmet.be/
 ├── app/               # Next.js App Router pages and layout
 ├── components/        # Reusable React components
+├── contexts/          # Global React contexts
+├── data/              # Data used througout the site
+├── lib/schemas        # Form validation schemas
 ├── public/            # Static assets (images, fonts, etc.)
-├── styles/            # Global and modular styles
-├── utils/             # Helpers and animation setup
 └── package.json
 ```
 
