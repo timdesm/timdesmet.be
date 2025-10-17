@@ -6,6 +6,7 @@ import { Urbanist } from "next/font/google";
 import LenisSmoothScroll from "@/components/scroll/LenisSmoothScroll";
 import { PortfolioProvider } from "@/contexts/PortfolioContext";
 import ScrollTop from "@/components/scroll/ScrollTop";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
           <LenisSmoothScroll />
           <ScrollTop />
+          <CustomCursor />
           {/* Global popup rendered after body content so it's not nested inside specific sections */}
           <InitScroll />
         </PortfolioProvider>
