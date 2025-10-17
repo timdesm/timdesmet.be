@@ -7011,3 +7011,79 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Contact Data End */
 /* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Custom Cursor */
+/* ------------------------------------------------*/
+
+body.custom-cursor-enabled,
+body.custom-cursor-enabled * {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  transition: opacity 0.15s ease, width 0.15s ease, height 0.15s ease, background-color 0.15s ease,
+    border-color 0.15s ease;
+  z-index: 9999999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor--hidden {
+  opacity: 0;
+}
+
+.custom-cursor--pressed {
+  opacity: 0.85;
+}
+
+.custom-cursor--cta {
+  width: 14px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.95);
+  mix-blend-mode: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    transition: opacity 0.2s ease;
+  }
+}
+
+.custom-cursor__particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: custom-cursor-particle var(--particle-duration, 0.55s) ease-out var(--particle-delay, 0s) forwards;
+  mix-blend-mode: difference;
+  z-index: 99999999;
+}
+
+@keyframes custom-cursor-particle {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--particle-x, 0px)), calc(-50% + var(--particle-y, 0px))) scale(0.35);
+  }
+}
