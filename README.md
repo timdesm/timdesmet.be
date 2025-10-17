@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="https://timdesmet.be/img/favicon/web-app-manifest-192x192.png" alt="Tim De Smet" width="120"/>
+  <h1>timdesmet.be</h1>
+  <p><strong>Personal Portfolio — built with Next.js & GSAP</strong></p>
+</div>
 
-## Getting Started
+---
 
-First, run the development server:
+## 🚀 Overview
+
+This is the source code for **[timdesmet.be](https://timdesmet.be)** — a minimalist, single-page portfolio website built with **Next.js**, **TypeScript**, and **GSAP animations**.  
+It showcases my work as a **developer, designer, and entrepreneur**, combining smooth motion design with a performant static build.
+
+---
+
+## 🧩 Tech Stack
+
+- **Next.js** (Static Site Generation & App Router)
+- **React 18**
+- **TypeScript**
+- **GSAP** for animation and scroll interactions
+- **SCSS / CSS Modules** for styling
+- **Deployed via [Wizzou](https://wizzou.com)**
+
+---
+
+## ⚙️ Development
+
+### Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Run locally
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧱 Project Structure
 
-## Learn More
+```
+timdesmet.be/
+├── app/               # Next.js App Router pages and layout
+├── components/        # Reusable React components
+├── public/            # Static assets (images, fonts, etc.)
+├── styles/            # Global and modular styles
+├── utils/             # Helpers and animation setup
+└── package.json
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🪄 Animations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All scroll-based and entrance animations are powered by **GSAP** and **ScrollTrigger**.  
+Animations are lightweight, performant, and trigger only once for visual polish without blocking rendering.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site is deployed via **[Wizzou](https://wizzou.com)** for optimal performance and CDN edge caching.  
+To build and serve manually:
+
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 👤 Author
+
+**Tim De Smet**  
+Software Engineer & Founder of [Wizzou](https://wizzou.com)  
+📍 Antwerp, Belgium
+
+---
+
+## 🖼️ License
+
+This project is open source and available under the [MIT License](LICENSE).
