@@ -5123,15 +5123,6 @@ form textarea:required:valid {
   -moz-background-size: cover;
   background-size: cover;
 }
-.item.image-1 {
-  background-image: url("/img/marquee/01.webp");
-}
-.item.image-2 {
-  background-image: url("/img/marquee/02.webp");
-}
-.item.image-3 {
-  background-image: url("/img/marquee/03.webp");
-}
 .item img {
   display: block;
   width: 100%;
