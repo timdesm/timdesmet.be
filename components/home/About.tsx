@@ -65,7 +65,7 @@ export default function About() {
                           <h6>
                             <a
                               className="link-inline text-link"
-                              href="#"
+                              href="#contact"
                             >
                               hello@wizzou.com
                             </a>

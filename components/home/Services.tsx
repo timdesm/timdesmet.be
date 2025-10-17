@@ -29,7 +29,6 @@ export default function Services() {
                     </RevealText>
                     <p className="h2__text type-basic-160lh animate-in-up">
                       Every project starts with understanding people - their needs, goals, and emotions. I turn ideas into digital experiences that not only work but connect. Design, code, and strategy aligned around what truly matters: impact.
-                      
                     </p>
                   </div>
                 </div>

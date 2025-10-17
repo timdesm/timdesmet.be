@@ -41,7 +41,9 @@ export default function Portfolios() {
                         <br />
                         some magic
                       </RevealText>
-                      <p className="h2__text type-basic-160lh animate-in-up">I wonder if I&apos;ve been changed in the night? Let me think. Was I the same when I got up this morning? I almost think I can remember feeling a little different.</p>
+                      <p className="h2__text type-basic-160lh animate-in-up">
+                        A selection of projects I&apos;ve worked on recently, ranging from web applications to branding and design.
+                      </p>
                     </div>
                   </div>
                   <div className="content__block grid-block">
