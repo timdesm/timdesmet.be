@@ -1,6 +1,7 @@
 import AnimatedCode from "@/components/animation/AnimatedCode";
 import RevealText from "@/components/animation/RevealText";
 import VelocityMarquee from "@/components/animation/VelocityMarquee";
+import TypedText from "@/components/animation/TypedText";
 import Image from "next/image";
 
 export default function Hero() {
@@ -14,12 +15,10 @@ export default function Hero() {
               <div id="headline" className="headline d-flex align-items-start flex-column loading-wrap">
                 <p className="headline__subtitle space-bottom loading__item hero-animate-in-up" data-duration="0.7" data-delay="100">
                   Hello!
-                  <br />I am Tim De Smet
+                  <br />I am <TypedText loop={false}><b>Tim De Smet</b></TypedText>
                 </p>
                 <h1 className="headline__title loading__item hero-animate-in-up" data-duration="0.7" data-delay="300">
-                  Developer
-                  <br />
-                  &amp; designer
+                  Developer<br /> &amp; designer
                 </h1>
                 <div className="headline__btn loading__item hero-animate-in-up" data-duration="0.7" data-delay="600">
                   <a className="btn btn-line-small icon-right slide-right-down" href="#portfolio">

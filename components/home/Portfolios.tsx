@@ -64,22 +64,10 @@ export default function Portfolios() {
                             </a>
                             <figcaption className={"gallery__descr" + (it.opposite ? " opposite" : "")} itemProp="caption description">
                               <h5>
-                                {it.title} test
+                                {it.title}
                                 <small>{it.category}</small>
                               </h5>
                               <p className="small">{it.description}</p>
-                              <a
-                                href={it.website}
-                                className="small"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={(e) => {
-                                  // prevent parent handlers (e.g. lightbox opening) from firing
-                                  e.stopPropagation();
-                                }}
-                              >
-                                Visit website
-                              </a>
                             </figcaption>
                           </figure>
                         ))}
