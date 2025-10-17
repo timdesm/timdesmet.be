@@ -5472,6 +5472,7 @@ form textarea:required:valid {
   overflow: hidden;
   -moz-border-radius: var(--_radius);
   border-radius: var(--_radius);
+  transform: translateZ(0);
 }
 .gallery__link .picture {
   position: absolute;
@@ -5527,6 +5528,33 @@ form textarea:required:valid {
 
 .gallery__image {
   opacity: 0;
+}
+
+.gallery__link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: -webkit-transform 0.45s var(--_animbezier);
+  transition: -webkit-transform 0.45s var(--_animbezier);
+  -moz-transition: transform 0.45s var(--_animbezier), -moz-transform 0.45s var(--_animbezier);
+  transition: transform 0.45s var(--_animbezier);
+  transition: transform 0.45s var(--_animbezier), -webkit-transform 0.45s var(--_animbezier),
+    -moz-transform 0.45s var(--_animbezier);
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  transform-origin: center center;
+  will-change: transform;
+}
+.no-touch .gallery__link:hover img,
+.no-touch .gallery__link:focus-visible img {
+  -webkit-transform: scale3d(1.06, 1.06, 1);
+  -moz-transform: scale3d(1.06, 1.06, 1);
+  transform: scale3d(1.06, 1.06, 1);
+}
+.gallery__link:focus-visible {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
 }
 
 .gallery__descr {
