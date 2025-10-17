@@ -1,0 +1,53 @@
+{
+  "home": [
+    {
+      "id": 1,
+      "title": "Fullstack \ndevelopment",
+      "icon": "ph-thin ph-code",
+      "text": "I work with Laravel, Next.js / Vue and Tailwind CSS to build fast and scalable web applications.",
+      "imgS": "/img/services/1200x1000_s02.webp",
+      "imgM": "/img/services/800x1000_s02.webp"
+    },
+    {
+      "id": 2,
+      "title": "Graphic \ndesign",
+      "icon": "ph-thin ph-bezier-curve",
+      "text": "I use Adobe Photoshop, Fresco and Blender to create illustrations and 3D renders for my clients and stocks.",
+      "imgS": "/img/services/1200x1000_s01.webp",
+      "imgM": "/img/services/800x1000_s01.webp"
+    },
+    {
+      "id": 3,
+      "title": "Brand \nidentity",
+      "icon": "ph-thin ph-cube",
+      "text": "I help my clients to develop a personality and brand voice, design the brand look and logo.",
+      "imgS": "/img/services/1200x1000_s03.webp",
+      "imgM": "/img/services/800x1000_s03.webp"
+    },
+    {
+      "id": 4,
+      "title": "Cloud & ICT \nmanagement",
+      "icon": "ph-thin ph-cloud",
+      "text": "Setting up cloud hosting, email services, domain management and IT infrastructure for businesses.",
+      "imgS": "/img/services/1200x1000_s04.webp",
+      "imgM": "/img/services/800x1000_s04.webp"
+    },
+    {
+      "id": 5,
+      "title": "SEO/Digital marketing solutions",
+      "icon": "ph-thin ph-graph",
+      "text": "Social media content plans, media monitoring, email and text messaging and search engine optimization.",
+      "imgS": "/img/services/1200x1000_s04.webp",
+      "imgM": "/img/services/800x1000_s04.webp"
+    }
+    ,
+    {
+      "id": 5,
+      "title": "AI optimization \nservices",
+      "icon": "ph-thin ph-robot",
+      "text": "Implementing AI tools and solutions to optimize business processes, enhance customer experiences, and drive innovation.",
+      "imgS": "/img/services/1200x1000_s04.webp",
+      "imgM": "/img/services/800x1000_s04.webp"
+    }
+  ]
+}
