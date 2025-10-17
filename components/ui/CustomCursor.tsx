@@ -22,6 +22,7 @@ const CustomCursor = () => {
 
     const body = document.body;
     body.classList.add("custom-cursor-enabled");
+    body.classList.remove("custom-cursor-active");
 
     const setPosition = (x: number, y: number) => {
       cursorEl.style.transform = `translate3d(${x}px, ${y}px, 0) translate3d(-50%, -50%, 0)`;
@@ -57,8 +58,8 @@ const CustomCursor = () => {
       }
     };
 
-    const updateInteractiveState = (event: PointerEvent) => {
-      const targetElement = (event.target as HTMLElement | null)?.closest(CLICKABLE_SELECTOR);
+    const updateInteractiveState = (target: EventTarget | null) => {
+      const targetElement = (target as HTMLElement | null)?.closest(CLICKABLE_SELECTOR);
       if (targetElement) {
         cursorEl.classList.add("custom-cursor--cta");
       } else {
@@ -71,8 +72,9 @@ const CustomCursor = () => {
         return;
       }
       cursorEl.classList.remove("custom-cursor--hidden");
+      body.classList.add("custom-cursor-active");
       setPosition(event.clientX, event.clientY);
-      updateInteractiveState(event);
+      updateInteractiveState(event.target);
     };
 
     const handlePointerDown = (event: PointerEvent) => {
@@ -80,6 +82,7 @@ const CustomCursor = () => {
         return;
       }
       cursorEl.classList.remove("custom-cursor--hidden");
+      body.classList.add("custom-cursor-active");
       setPosition(event.clientX, event.clientY);
       cursorEl.classList.add("custom-cursor--pressed");
       spawnParticles(event.clientX, event.clientY);
@@ -89,19 +92,27 @@ const CustomCursor = () => {
     const handlePointerLeaveDocument = (event: PointerEvent) => {
       if (!event.relatedTarget) {
         cursorEl.classList.add("custom-cursor--hidden");
+        body.classList.remove("custom-cursor-active");
       }
     };
+
+    const handlePointerOver = (event: PointerEvent) => {
+      body.classList.add("custom-cursor-active");
+      updateInteractiveState(event.target);
+    };
+    const handlePointerOut = (event: PointerEvent) => updateInteractiveState(event.relatedTarget);
 
     document.addEventListener("pointermove", handlePointerMove);
     document.addEventListener("pointerdown", handlePointerDown);
     document.addEventListener("pointerup", handlePointerUp);
     document.addEventListener("pointerleave", handlePointerLeaveDocument);
-    document.addEventListener("pointerover", updateInteractiveState);
-    document.addEventListener("pointerout", updateInteractiveState);
+    document.addEventListener("pointerover", handlePointerOver);
+    document.addEventListener("pointerout", handlePointerOut);
 
     const handleVisibilityChange = () => {
       if (document.visibilityState === "hidden") {
         cursorEl.classList.add("custom-cursor--hidden");
+        body.classList.remove("custom-cursor-active");
       }
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
@@ -116,12 +127,13 @@ const CustomCursor = () => {
       document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("pointerup", handlePointerUp);
       document.removeEventListener("pointerleave", handlePointerLeaveDocument);
-      document.removeEventListener("pointerover", updateInteractiveState);
-      document.removeEventListener("pointerout", updateInteractiveState);
+      document.removeEventListener("pointerover", handlePointerOver);
+      document.removeEventListener("pointerout", handlePointerOut);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("resize", handleResize);
 
       body.classList.remove("custom-cursor-enabled");
+      body.classList.remove("custom-cursor-active");
     };
   }, []);
 
