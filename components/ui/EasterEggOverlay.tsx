@@ -836,10 +836,10 @@ const EasterEggOverlay = () => {
 
   return (
     <div ref={overlayRef} className="tron-arcade" aria-hidden={!isOpen}>
-      <div
+      {/* <div
         className={`tron-arcade__grid${touchControlsEnabled && gameStatus !== "playing" ? " tron-arcade__grid--hidden" : ""}`}
         aria-hidden={touchControlsEnabled && gameStatus !== "playing"}
-      />
+      /> */}
       <div className="tron-arcade__glow" />
       <div className="tron-arcade__shell">
         <header className="tron-arcade__header">
@@ -860,34 +860,38 @@ const EasterEggOverlay = () => {
               <p className="tron-arcade__subhead">{statusCopy}</p>
             </div>
 
-            <div className="tron-arcade__form">
-              <label htmlFor="tron-player-name" className="tron-arcade__form-label">
-                Pilot Handle
-              </label>
-              <input
-                id="tron-player-name"
-                className="tron-arcade__input"
-                value={playerName}
-                onChange={handleNameChange}
-                maxLength={18}
-                placeholder="Enter your call sign"
-                autoComplete="off"
-              />
-            </div>
-
-            <div className="tron-arcade__players">
-              {(Object.keys(PLAYER_CONFIG) as PlayerId[]).map((id) => (
-                <div key={id} className="tron-arcade__player">
-                  <span className="tron-arcade__player-swatch" data-player={id} />
-                  <div className="tron-arcade__player-copy">
-                    <span className="tron-arcade__player-label">{playerDescriptors[id].name}</span>
-                    <span className="tron-arcade__player-hint">{playerDescriptors[id].hint}</span>
+            {((touchControlsEnabled && gameStatus !== "playing") || !touchControlsEnabled) && (
+              <div className="tron-arcade__form">
+                <label htmlFor="tron-player-name" className="tron-arcade__form-label">
+                  Pilot Handle
+                </label>
+                <input
+                  id="tron-player-name"
+                  className="tron-arcade__input"
+                  value={playerName}
+                  onChange={handleNameChange}
+                  maxLength={18}
+                  placeholder="Enter your call sign"
+                  autoComplete="off"
+                />
+              </div>
+            )}
+            
+            {((touchControlsEnabled && gameStatus !== "playing") || !touchControlsEnabled) && (
+              <div className="tron-arcade__players">
+                {(Object.keys(PLAYER_CONFIG) as PlayerId[]).map((id) => (
+                  <div key={id} className="tron-arcade__player">
+                    <span className="tron-arcade__player-swatch" data-player={id} />
+                    <div className="tron-arcade__player-copy">
+                      <span className="tron-arcade__player-label">{playerDescriptors[id].name}</span>
+                      <span className="tron-arcade__player-hint">{playerDescriptors[id].hint}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
 
-            {isBotMode && !(touchControlsEnabled && gameStatus === "playing") && (
+            {isBotMode && (
               <div className="tron-arcade__metrics">
                 <div className="tron-arcade__metric">
                   <span className="tron-arcade__metric-label">Score</span>
@@ -912,7 +916,7 @@ const EasterEggOverlay = () => {
             )}
 
             <div className="tron-arcade__actions">
-              {gameStatus === "menu" && !touchControlsEnabled && (
+              {gameStatus === "menu" && (
                 <>
                   <button type="button" className="tron-arcade__button" onClick={() => startGame("bot")}>
                     VS Tim (AI)
@@ -1048,32 +1052,36 @@ const EasterEggOverlay = () => {
               </div>
             )}
 
-            <div className="tron-arcade__legend">
-              <p>
-                Hold steady: trails are lethal on contact. Keep to the vector, claim the grid, and
-                derez anything in your path.
-              </p>
-            </div>
-          </aside>
-
-          <div className="tron-arcade__board">
-            <canvas ref={canvasRef} width={BOARD_WIDTH} height={BOARD_HEIGHT} />
-            {gameStatus === "menu" && (
-              <div className="tron-arcade__overlay">
-                <p className="tron-arcade__overlay-title">Select Mode</p>
-                <p className="tron-arcade__overlay-copy">
-                  Deploy solo against Tim’s lightcycle AI, or run dual pilots with shared controls.
+            {((touchControlsEnabled && gameStatus !== "playing") || !touchControlsEnabled) && (
+              <div className="tron-arcade__legend">
+                <p>
+                  Hold steady: trails are lethal on contact. Keep to the vector, claim the grid, and
+                  derez anything in your path.
                 </p>
               </div>
             )}
+          </aside>
 
-            {gameStatus === "ended" && winner && (
-              <div className="tron-arcade__overlay tron-arcade__overlay--result">
-                <p className="tron-arcade__overlay-title">{resultTitle ?? "Grid Update"}</p>
-                <p className="tron-arcade__overlay-copy">{resultCopy ?? "Re-initialize your lightcycle to continue."}</p>
-              </div>
+            {((touchControlsEnabled && gameStatus === "playing") || !touchControlsEnabled) && (
+            <div className="tron-arcade__board">
+              <canvas ref={canvasRef} width={BOARD_WIDTH} height={BOARD_HEIGHT} />
+              {gameStatus === "menu" && (
+                <div className="tron-arcade__overlay">
+                  <p className="tron-arcade__overlay-title">Select Mode</p>
+                  <p className="tron-arcade__overlay-copy">
+                    Deploy solo against Tim’s lightcycle AI, or run dual pilots with shared controls.
+                  </p>
+                </div>
+              )}
+
+              {gameStatus === "ended" && winner && (
+                <div className="tron-arcade__overlay tron-arcade__overlay--result">
+                  <p className="tron-arcade__overlay-title">{resultTitle ?? "Grid Update"}</p>
+                  <p className="tron-arcade__overlay-copy">{resultCopy ?? "Re-initialize your lightcycle to continue."}</p>
+                </div>
+              )}
+            </div>
             )}
-          </div>
         </div>
       </div>
     </div>
