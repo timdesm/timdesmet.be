@@ -921,31 +921,35 @@ const EasterEggOverlay = () => {
                   <button type="button" className="tron-arcade__button" onClick={() => startGame("bot")}>
                     VS Tim (AI)
                   </button>
-                  <div className="tron-arcade__level-control">
-                    <label htmlFor="tron-versus-level" className="tron-arcade__form-label">
-                      Dual Pilot Difficulty
-                    </label>
-                    <div className="tron-arcade__level-control-row">
-                      <input
-                        id="tron-versus-level"
-                        type="range"
-                        min={1}
-                        max={10}
-                        step={1}
-                        value={versusLevelSelect}
-                        onChange={handleVersusLevelChange}
-                        className="tron-arcade__slider"
-                      />
-                      <span className="tron-arcade__level-indicator">Level {versusLevelSelect}</span>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    className="tron-arcade__button tron-arcade__button--outline"
-                    onClick={() => startGame("versus", versusLevelSelect)}
-                  >
-                    Dual Pilot (WASD + Arrows)
-                  </button>
+                  {!touchControlsEnabled && (
+                      <div className="tron-arcade__level-control">
+                        <label htmlFor="tron-versus-level" className="tron-arcade__form-label">
+                          Dual Pilot Difficulty
+                        </label>
+                        <div className="tron-arcade__level-control-row">
+                          <input
+                            id="tron-versus-level"
+                            type="range"
+                            min={1}
+                            max={10}
+                            step={1}
+                            value={versusLevelSelect}
+                            onChange={handleVersusLevelChange}
+                            className="tron-arcade__slider"
+                          />
+                          <span className="tron-arcade__level-indicator">Level {versusLevelSelect}</span>
+                        </div>
+                      </div>
+                    )}
+                    {!touchControlsEnabled && (
+                      <button
+                        type="button"
+                        className="tron-arcade__button tron-arcade__button--outline"
+                        onClick={() => startGame("versus", versusLevelSelect)}
+                      >
+                        Dual Pilot (WASD + Arrows)
+                      </button>
+                  )}
                 </>
               )}
 
