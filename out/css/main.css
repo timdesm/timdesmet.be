@@ -7146,7 +7146,7 @@ body.tron-overlay-open .custom-cursor {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid rgba(120, 255, 214, 0.65);
+  border: 1px solid rgba(0, 247, 255, 0.65);
   background: rgba(10, 12, 18, 0.85);
   mix-blend-mode: normal;
 }
@@ -7160,18 +7160,18 @@ body.tron-overlay-open .custom-cursor::after {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid rgba(120, 255, 214, 0.9);
-  box-shadow: 0 0 14px rgba(120, 255, 214, 0.55);
+  border: 2px solid rgba(0, 247, 255, 0.9);
+  box-shadow: 0 0 14px rgba(0, 247, 255, 0.55);
 }
 
 body.tron-overlay-open .custom-cursor.custom-cursor--cta {
-  background: rgba(120, 255, 214, 0.18);
-  border-color: rgba(120, 255, 214, 0.8);
+  background: rgba(255, 0, 25, 0.26);
+  border-color: rgba(255, 0, 43, 0.8);
 }
 
 body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
-  border-color: rgba(255, 110, 199, 0.9);
-  box-shadow: 0 0 18px rgba(255, 110, 199, 0.6);
+  border-color: rgba(255, 41, 90, 0.9);
+  box-shadow: 0 0 18px rgba(255, 41, 90, 0.6);
 }
 
 /* ------------------------------------------------*/
@@ -7205,14 +7205,14 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 
 .tron-arcade__grid {
   background-image:
-    radial-gradient(circle at center, rgba(120, 255, 214, 0.08) 0, transparent 60%),
+    radial-gradient(circle at center, rgba(0, 247, 255, 0.1) 0, transparent 60%),
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 100%, 110px 110px, 110px 110px;
 }
 
 .tron-arcade__glow {
-  background: radial-gradient(circle at top right, rgba(255, 110, 199, 0.16), transparent 55%);
+  background: radial-gradient(circle at top right, rgba(255, 41, 90, 0.2), transparent 55%);
 }
 
 .tron-arcade__shell {
@@ -7225,7 +7225,7 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   border-radius: 26px;
   padding: clamp(1.8rem, 3vw, 2.8rem);
   background: rgba(5, 8, 13, 0.94);
-  border: 1px solid rgba(120, 255, 214, 0.28);
+  border: 1px solid rgba(0, 247, 255, 0.28);
   box-shadow: 0 28px 120px rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(18px);
   pointer-events: auto;
@@ -7258,18 +7258,18 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(120, 255, 214, 0.65);
-  box-shadow: 0 0 12px rgba(120, 255, 214, 0.55);
+  background: rgba(0, 247, 255, 0.65);
+  box-shadow: 0 0 12px rgba(0, 247, 255, 0.55);
 }
 
 .tron-arcade__divider {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(120, 255, 214, 0.3), rgba(255, 110, 199, 0.18));
+  background: linear-gradient(90deg, rgba(0, 247, 255, 0.3), rgba(255, 41, 90, 0.2));
 }
 
 .tron-arcade__close {
-  border: 1px solid rgba(120, 255, 214, 0.25);
+  border: 1px solid rgba(0, 247, 255, 0.25);
   background: transparent;
   color: rgba(189, 223, 255, 0.7);
   padding: 0.55rem 1.4rem;
@@ -7280,7 +7280,7 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 }
 
 .tron-arcade__close:hover {
-  border-color: rgba(255, 110, 199, 0.65);
+  border-color: rgba(255, 41, 90, 0.65);
   color: rgba(255, 255, 255, 0.95);
   transform: translateY(-2px);
 }
@@ -7299,7 +7299,7 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 }
 
 .tron-arcade__status-label {
-  font-size: 0.85rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.24em;
   color: rgba(189, 223, 255, 0.5);
@@ -7315,7 +7315,7 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 }
 
 .tron-arcade__subhead {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: rgba(189, 223, 255, 0.68);
   line-height: 1.6;
 }
@@ -7361,7 +7361,7 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   flex: 1;
   height: 4px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(120, 255, 214, 0.8), rgba(255, 110, 199, 0.6));
+  background: linear-gradient(90deg, rgba(0, 247, 255, 0.8), rgba(255, 41, 90, 0.6));
   outline: none;
   cursor: pointer;
 }
@@ -7373,8 +7373,8 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   height: 16px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.95);
-  border: 2px solid rgba(120, 255, 214, 0.8);
-  box-shadow: 0 0 12px rgba(120, 255, 214, 0.5);
+  border: 2px solid rgba(0, 247, 255, 0.8);
+  box-shadow: 0 0 12px rgba(0, 247, 255, 0.5);
 }
 
 .tron-arcade__slider::-moz-range-thumb {
@@ -7382,8 +7382,8 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   height: 16px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.95);
-  border: 2px solid rgba(120, 255, 214, 0.8);
-  box-shadow: 0 0 12px rgba(120, 255, 214, 0.5);
+  border: 2px solid rgba(0, 247, 255, 0.8);
+  box-shadow: 0 0 12px rgba(0, 247, 255, 0.5);
 }
 
 .tron-arcade__level-indicator {
@@ -7415,22 +7415,22 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   width: 72px;
   height: 72px;
   border-radius: 18px;
-  border: 1px solid rgba(120, 255, 214, 0.45);
+  border: 1px solid rgba(0, 247, 255, 0.45);
   background: rgba(8, 12, 18, 0.65);
   color: rgba(255, 255, 255, 0.85);
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 20px rgba(120, 255, 214, 0.12);
+  box-shadow: inset 0 0 20px rgba(0, 247, 255, 0.2);
   transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
 .tron-arcade__touch-button:hover,
 .tron-arcade__touch-button:active {
   transform: translateY(-2px);
-  border-color: rgba(120, 255, 214, 0.8);
-  background: rgba(120, 255, 214, 0.2);
+  border-color: rgba(0, 247, 255, 0.8);
+  background: rgba(0, 247, 255, 0.28);
 }
 
 .tron-arcade__touch-button--up {
@@ -7442,7 +7442,7 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   width: 100%;
   padding: 1rem 1.5rem;
   border-radius: 999px;
-  border: 1px solid rgba(120, 255, 214, 0.35);
+  border: 1px solid rgba(0, 247, 255, 0.35);
   background: rgba(8, 12, 18, 0.7);
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.5rem;
@@ -7452,8 +7452,8 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 
 .tron-arcade__input:focus {
   outline: none;
-  border-color: rgba(120, 255, 214, 0.75);
-  box-shadow: 0 0 0 3px rgba(120, 255, 214, 0.18);
+  border-color: rgba(0, 247, 255, 0.75);
+  box-shadow: 0 0 0 3px rgba(0, 247, 255, 0.26);
 }
 
 .tron-arcade__player {
@@ -7466,19 +7466,19 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   width: 14px;
   height: 36px;
   border-radius: 6px;
-  box-shadow: 0 0 16px rgba(120, 255, 214, 0.35);
+  box-shadow: 0 0 16px rgba(0, 247, 255, 0.35);
 }
 
 .tron-arcade__player-swatch[data-player="player2"] {
-  box-shadow: 0 0 16px rgba(255, 110, 199, 0.35);
+  box-shadow: 0 0 16px rgba(255, 41, 90, 0.35);
 }
 
 .tron-arcade__player-swatch[data-player="player1"] {
-  background: linear-gradient(180deg, rgba(120, 255, 214, 0.8), rgba(120, 255, 214, 0.2));
+  background: linear-gradient(180deg, rgba(0, 247, 255, 0.8), rgba(0, 247, 255, 0.28));
 }
 
 .tron-arcade__player-swatch[data-player="player2"] {
-  background: linear-gradient(180deg, rgba(255, 110, 199, 0.8), rgba(255, 110, 199, 0.2));
+  background: linear-gradient(180deg, rgba(255, 41, 90, 0.85), rgba(255, 41, 90, 0.3));
 }
 
 .tron-arcade__player-copy {
@@ -7512,8 +7512,8 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   padding: 1rem 1.2rem;
   border-radius: 18px;
   background: rgba(8, 12, 18, 0.7);
-  border: 1px solid rgba(120, 255, 214, 0.18);
-  box-shadow: inset 0 0 32px rgba(120, 255, 214, 0.08);
+  border: 1px solid rgba(0, 247, 255, 0.26);
+  box-shadow: inset 0 0 32px rgba(0, 247, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -7540,11 +7540,11 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 }
 
 .tron-arcade__metric-delta.is-positive {
-  color: rgba(120, 255, 214, 0.85);
+  color: rgba(0, 247, 255, 0.85);
 }
 
 .tron-arcade__metric-delta.is-negative {
-  color: rgba(255, 110, 199, 0.75);
+  color: rgba(255, 41, 90, 0.8);
 }
 
 .tron-arcade__actions {
@@ -7558,8 +7558,8 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
   align-items: center;
   padding: 0.85rem 1.6rem;
   border-radius: 999px;
-  border: 1px solid rgba(120, 255, 214, 0.55);
-  background: rgba(120, 255, 214, 0.08);
+  border: 1px solid rgba(0, 247, 255, 0.55);
+  background: rgba(0, 247, 255, 0.1);
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -7569,29 +7569,29 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 
 .tron-arcade__button:hover {
   transform: translateY(-2px);
-  border-color: rgba(120, 255, 214, 0.9);
-  background: rgba(120, 255, 214, 0.18);
+  border-color: rgba(0, 247, 255, 0.9);
+  background: rgba(0, 247, 255, 0.26);
 }
 
 .tron-arcade__button--accent {
-  border-color: rgba(120, 255, 214, 0.75);
-  background: rgba(120, 255, 214, 0.2);
-  box-shadow: 0 0 18px rgba(120, 255, 214, 0.25);
+  border-color: rgba(0, 247, 255, 0.75);
+  background: rgba(0, 247, 255, 0.28);
+  box-shadow: 0 0 18px rgba(0, 247, 255, 0.25);
 }
 
 .tron-arcade__button--accent:hover {
-  border-color: rgba(120, 255, 214, 0.95);
-  background: rgba(120, 255, 214, 0.28);
+  border-color: rgba(0, 247, 255, 0.95);
+  background: rgba(0, 247, 255, 0.28);
 }
 
 .tron-arcade__button--outline {
-  border-color: rgba(255, 110, 199, 0.45);
-  background: rgba(255, 110, 199, 0.08);
+  border-color: rgba(255, 41, 90, 0.55);
+  background: rgba(255, 41, 90, 0.18);
 }
 
 .tron-arcade__button--outline:hover {
-  border-color: rgba(255, 110, 199, 0.75);
-  background: rgba(255, 110, 199, 0.16);
+  border-color: rgba(255, 41, 90, 0.8);
+  background: rgba(255, 41, 90, 0.2);
 }
 
 .tron-arcade__legend p {
@@ -7612,9 +7612,9 @@ body.tron-overlay-open .custom-cursor.custom-cursor--cta::after {
 .tron-arcade__board {
   position: relative;
   border-radius: 22px;
-  border: 1px solid rgba(120, 255, 214, 0.2);
-  background: radial-gradient(circle at center, rgba(120, 255, 214, 0.08), rgba(5, 8, 13, 0.95));
-  box-shadow: inset 0 0 70px rgba(120, 255, 214, 0.15);
+  border: 1px solid rgba(0, 247, 255, 0.28);
+  background: radial-gradient(circle at center, rgba(0, 247, 255, 0.1), rgba(5, 8, 13, 0.95));
+  box-shadow: inset 0 0 70px rgba(0, 247, 255, 0.22);
   overflow: hidden;
   min-height: 420px;
   display: flex;

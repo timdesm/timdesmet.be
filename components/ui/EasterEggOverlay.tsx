@@ -46,13 +46,13 @@ const MAX_TURNS = GRID_COLS * GRID_ROWS;
 
 const PLAYER_CONFIG = {
   player1: {
-    color: "#78ffd6",
-    glow: "rgba(120,255,214,0.45)",
+    color: "#00f7ff",
+    glow: "rgba(0,247,255,0.45)",
     hint: "WASD",
   },
   player2: {
-    color: "#ff6ec7",
-    glow: "rgba(255,110,199,0.45)",
+    color: "#ff295a",
+    glow: "rgba(255,41,90,0.45)",
     hint: "Arrow Keys",
   },
 } as const satisfies Record<PlayerId, { color: string; glow: string; hint: string }>;
