@@ -891,7 +891,7 @@ const EasterEggOverlay = () => {
               </div>
             )}
 
-            {isBotMode && (
+            {isBotMode && !(touchControlsEnabled && gameStatus === "playing") && (
               <div className="tron-arcade__metrics">
                 <div className="tron-arcade__metric">
                   <span className="tron-arcade__metric-label">Score</span>
