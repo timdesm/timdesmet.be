@@ -9,6 +9,12 @@ const defaultMenuItems = [
 
 import { useEffect, useState } from "react";
 
+declare global {
+  interface Window {
+    showTronOverlay?: () => void;
+  }
+}
+
 export default function Header({
   menuItems = defaultMenuItems,
 }: {
@@ -72,6 +78,16 @@ export default function Header({
                 </a>
               </li>
             ))}
+            <li className="menu__item menu__item--mobile-only">
+              <button
+                type="button"
+                onClick={() => window.showTronOverlay?.()}
+                className="menu__link btn menu__link--icon"
+                aria-label="Launch lightcycle"
+              >
+                <i className="ph ph-motorcycle" aria-hidden="true" />
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
