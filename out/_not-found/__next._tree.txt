@@ -1,0 +1,11 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+5:"$Sreact.suspense"
+7:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
+:HL["/_next/static/chunks/1bf9002ca8423856.css","style"]
+:HL["/_next/static/chunks/f27647097bd8386b.css","style"]
+:HL["/_next/static/chunks/f6a67faea4a061bf.css","style"]
+0:{"buildId":"JQ8KYjicgdXfvIkvRb5M3","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"head":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isHeadPartial":false,"staleTime":300}
+3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:[["$","title","0",{"children":"Tim De Smet - Full Stack Developer & Designer"}],["$","meta","1",{"name":"description","content":"Welcome to the portfolio of Tim De Smet, a skilled Full Stack Developer and Designer located in Antwerp, Belgium. Explore my projects, services, and get in touch for collaborations."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.e6c6d0e9.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L7","3",{}]]

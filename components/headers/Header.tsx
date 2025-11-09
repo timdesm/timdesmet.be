@@ -8,6 +8,7 @@ const defaultMenuItems = [
 ];
 
 import { useEffect, useState } from "react";
+import { sendGTMEvent } from '@next/third-parties/google'
 
 declare global {
   interface Window {
@@ -79,14 +80,17 @@ export default function Header({
               </li>
             ))}
             <li className="menu__item menu__item--mobile-only">
-              <button
+                <button
                 type="button"
-                onClick={() => window.showTronOverlay?.()}
+                onClick={() => {
+                  sendGTMEvent({ event: 'button_click', value: 'tron_arcade' });
+                  window.showTronOverlay?.();
+                }}
                 className="menu__link btn menu__link--icon"
                 aria-label="Launch lightcycle"
-              >
+                >
                 <i className="ph ph-motorcycle" aria-hidden="true" />
-              </button>
+                </button>
             </li>
           </ul>
         </nav>
