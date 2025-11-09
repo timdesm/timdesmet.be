@@ -8,6 +8,9 @@ import { PortfolioProvider } from "@/contexts/PortfolioContext";
 import ScrollTop from "@/components/scroll/ScrollTop";
 import CustomCursor from "@/components/ui/CustomCursor";
 import EasterEggOverlay from "@/components/ui/EasterEggOverlay";
+import Script from "next/script";
+
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -31,7 +34,35 @@ export default function RootLayout({
       suppressHydrationWarning
       className="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
     >
+      <head>
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `,
+          }}
+        />
+      </head>
       <body className={urbanist.variable}>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <PortfolioProvider>
           {children}
           <LenisSmoothScroll />
